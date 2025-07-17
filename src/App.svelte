@@ -3,3 +3,4 @@
 </script>
 
 <Input />
+<h2>votre prix</h2>
