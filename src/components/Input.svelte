@@ -1,3 +1,11 @@
+<script>
+  let initial = $state(10000);
+  let startCapital = $state(10000);
+  let frequency = $state("Mensuel");
+  let interestRate = $state(0);
+  let duration = $state(20);
+</script>
+
 <div
   class="card bg-base-100 flex flex-col items-center shadow-sm w-fit gap-6 p-6"
 >
@@ -9,32 +17,50 @@
       <label for="Montant du versement initial "
         >Montant du versement initial
       </label>
-      <input class=" input" id="Montant du versement initial" type="number" />
+      <input
+        bind:value={initial}
+        class=" input"
+        id="Montant du versement initial"
+        type="number"
+      />
     </div>
     <div class="flex flex-col">
-      <label for="Montant du versement régulier "
-        >Montant du versement régulier
+      <label for="Montant du versement régulier ">
+        Montant du versement régulier
       </label>
-      <input class=" input" id="Montant du versement régulier " type="number" />
+      <input
+        bind:value={startCapital}
+        class=" input"
+        id="Montant du versement régulier "
+        type="number"
+      />
     </div>
     <div class="flex flex-col">
       <label for="Fréquence du versement régulier">
         Fréquence du versement régulier
       </label>
-      <select class="select">
-        <option disabled selected>Pick a color</option>
-        <option>Crimson</option>
-        <option>Amber</option>
-        <option>Velvet</option>
+      <select bind:value={frequency} class="select">
+        <option>Mensuel</option>
+        <option>Annuel</option>
       </select>
     </div>
     <div class="flex flex-col">
       <label for="Taux d'intérêt (% par an) ">Taux d'intérêt</label>
-      <input class=" input" id="Taux d'intérêt (% par an) " type="number" />
+      <input
+        bind:value={interestRate}
+        class=" input"
+        id="Taux d'intérêt (% par an) "
+        type="number"
+      />
     </div>
     <div class="flex flex-col">
       <label for="Durée (en années) ">Durée (en années) </label>
-      <input class=" input" id="Durée (en années) " type="number" />
+      <input
+        bind:value={duration}
+        class=" input"
+        id="Durée (en années) "
+        type="number"
+      />
     </div>
   </form>
 </div>
