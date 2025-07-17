@@ -1,9 +1,11 @@
 <script>
-  let initial = $state(10000);
-  let startCapital = $state(10000);
-  let frequency = $state("Mensuel");
-  let interestRate = $state(0);
-  let duration = $state(20);
+  let {
+    initial = $bindable(10000),
+    startCapital = $bindable(10000),
+    frequency = $bindable("Mensuel"),
+    interestRate = $bindable(0),
+    duration = $bindable(20),
+  } = $props();
 </script>
 
 <div
