@@ -6,7 +6,9 @@
 <div
   class="card bg-base-100 flex flex-col items-center shadow-sm w-fit gap-6 p-6"
 >
-  <h1 class="text-2xl px-6 font-bold text-orange-400">
+  <h1
+    class="text-2xl px-6 font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text"
+  >
     Résultat de la simulation
   </h1>
 
