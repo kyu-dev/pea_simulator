@@ -5,6 +5,17 @@ export function getResult(
   interestRate: number,
   duration: number
 ) {
+  // Vérifications de base
+  if (
+    !initialCapital ||
+    !regularContribution ||
+    !frequency ||
+    !interestRate ||
+    !duration
+  ) {
+    return { final: 0, history: [] };
+  }
+
   // Conversion du taux d'intérêt en décimal
   const rate = interestRate / 100;
 
