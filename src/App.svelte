@@ -28,15 +28,6 @@
   bind:interestRate
   bind:duration
 />
-<h2>Vos valeurs</h2>
-
-<div class="p-4 bg-gray-100 text-black rounded">
-  <p><strong>Versement initial:</strong> {initialCapital}€</p>
-  <p><strong>Versement régulier:</strong> {regularContribution}€</p>
-  <p><strong>Fréquence:</strong> {frequency}</p>
-  <p><strong>Taux d'intérêt:</strong> {interestRate}%</p>
-  <p><strong>Durée:</strong> {duration} années</p>
-</div>
 
 <h2>Résultat de la simulation</h2>
 <div class="p-4 bg-green-100 text-black rounded mt-4">
