@@ -1,9 +1,9 @@
 <script>
   let {
-    initial = $bindable(10000),
-    startCapital = $bindable(10000),
+    initialCapital = $bindable(10000),
+    regularContribution = $bindable(1000),
     frequency = $bindable("Mensuel"),
-    interestRate = $bindable(0),
+    interestRate = $bindable(5),
     duration = $bindable(20),
   } = $props();
 </script>
@@ -14,54 +14,72 @@
   <h1 class="text-2xl px-6 font-bold text-orange-400">
     Calculateur d'intérêt composé
   </h1>
-  <form action="flex">
+  <form class="flex flex-col gap-4">
     <div class="flex flex-col">
-      <label for="Montant du versement initial "
-        >Montant du versement initial
+      <label for="initial-capital" class="label">
+        Montant du versement initial (€)
       </label>
       <input
-        bind:value={initial}
-        class=" input"
-        id="Montant du versement initial"
+        bind:value={initialCapital}
+        class="input input-bordered"
+        id="initial-capital"
         type="number"
+        min="0"
+        step="100"
       />
     </div>
     <div class="flex flex-col">
-      <label for="Montant du versement régulier ">
-        Montant du versement régulier
+      <label for="regular-contribution" class="label">
+        Montant du versement régulier (€)
       </label>
       <input
-        bind:value={startCapital}
-        class=" input"
-        id="Montant du versement régulier "
+        bind:value={regularContribution}
+        class="input input-bordered"
+        id="regular-contribution"
         type="number"
+        min="0"
+        step="50"
       />
     </div>
     <div class="flex flex-col">
-      <label for="Fréquence du versement régulier">
+      <label for="frequency" class="label">
         Fréquence du versement régulier
       </label>
-      <select bind:value={frequency} class="select">
+      <select
+        bind:value={frequency}
+        class="select select-bordered"
+        id="frequency"
+      >
         <option>Mensuel</option>
         <option>Annuel</option>
       </select>
     </div>
     <div class="flex flex-col">
-      <label for="Taux d'intérêt (% par an) ">Taux d'intérêt</label>
+      <label for="interest-rate" class="label">
+        Taux d'intérêt annuel (%)
+      </label>
       <input
         bind:value={interestRate}
-        class=" input"
-        id="Taux d'intérêt (% par an) "
+        class="input input-bordered"
+        id="interest-rate"
         type="number"
+        min="0"
+        max="20"
+        step="0.1"
       />
     </div>
     <div class="flex flex-col">
-      <label for="Durée (en années) ">Durée (en années) </label>
+      <label for="duration" class="label">
+        Durée de l'investissement (années)
+      </label>
       <input
         bind:value={duration}
-        class=" input"
-        id="Durée (en années) "
+        class="input input-bordered"
+        id="duration"
         type="number"
+        min="1"
+        max="50"
+        step="1"
       />
     </div>
   </form>
