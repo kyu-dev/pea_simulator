@@ -1,5 +1,6 @@
 <script>
   import Input from "./components/Input.svelte";
+  import Result from "./components/Result.svelte";
   import { getResult } from "./lib/calcul";
 
   // Variables d'état dans le parent
@@ -21,36 +22,20 @@
   );
 </script>
 
-<Input
-  bind:initialCapital
-  bind:regularContribution
-  bind:frequency
-  bind:interestRate
-  bind:duration
-/>
+<div class="flex justify-evenly">
+  <Input
+    bind:initialCapital
+    bind:regularContribution
+    bind:frequency
+    bind:interestRate
+    bind:duration
+  />
 
-<h2>Résultat de la simulation</h2>
-<div class="p-4 bg-green-100 text-black rounded mt-4">
-  <p>
-    <strong>Capital final:</strong>
-    {result.final.toLocaleString("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-    })}
-  </p>
-  <p>
-    <strong>Total investi:</strong>
-    {(
-      initialCapital +
-      regularContribution * (frequency === "Mensuel" ? 12 : 1) * duration
-    ).toLocaleString("fr-FR", { style: "currency", currency: "EUR" })}
-  </p>
-  <p>
-    <strong>Gains:</strong>
-    {(
-      result.final -
-      initialCapital -
-      regularContribution * (frequency === "Mensuel" ? 12 : 1) * duration
-    ).toLocaleString("fr-FR", { style: "currency", currency: "EUR" })}
-  </p>
+  <Result
+    {result}
+    {initialCapital}
+    {regularContribution}
+    {frequency}
+    {duration}
+  />
 </div>
