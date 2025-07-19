@@ -6,12 +6,17 @@ export function getResult(
   duration: number
 ) {
   if (
-    !initialCapital ||
-    !regularContribution ||
+    initialCapital < 0 ||
+    regularContribution < 0 ||
     !frequency ||
-    !interestRate ||
-    !duration
+    interestRate < 0 ||
+    duration <= 0
   ) {
+    return { final: 0, history: [] };
+  }
+
+  // Si pas de capital initial et pas de versements, pas de calcul possible
+  if (initialCapital === 0 && regularContribution === 0) {
     return { final: 0, history: [] };
   }
 
