@@ -1,6 +1,7 @@
 <script>
   import Input from "./components/Input.svelte";
   import Result from "./components/Result.svelte";
+  import Hero from "./components/Hero.svelte";
   import { getResult } from "./lib/calcul";
 
   // Variables d'état dans le parent
@@ -22,6 +23,7 @@
   );
 </script>
 
+<Hero />
 <div class="flex justify-evenly">
   <Input
     bind:initialCapital
