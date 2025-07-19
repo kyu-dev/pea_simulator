@@ -7,10 +7,10 @@
   import Header from "./components/Header.svelte";
 
   // Variables d'état dans le parent
-  let initialCapital = $state(10000);
-  let regularContribution = $state(1000);
+  let initialCapital = $state(1000);
+  let regularContribution = $state(100);
   let frequency = $state("Mensuel");
-  let interestRate = $state(5);
+  let interestRate = $state(7);
   let duration = $state(20);
 
   // Calcul réactif
