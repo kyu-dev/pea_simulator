@@ -5,7 +5,6 @@ export function getResult(
   interestRate: number,
   duration: number
 ) {
-  // Vérifications de base
   if (
     !initialCapital ||
     !regularContribution ||
