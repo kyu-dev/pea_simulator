@@ -1,2 +1,65 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@import "daisyui";
+
+/* Styles globaux pour améliorer l'apparence */
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Animation pour les cartes au survol */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Amélioration des inputs avec focus */
+.input:focus,
+.select:focus {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* Glassmorphism pour les éléments interactifs */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Animation de pulsation douce */
+@keyframes gentle-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #f59e0b, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #d97706, #db2777);
+}

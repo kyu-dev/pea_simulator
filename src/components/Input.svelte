@@ -9,78 +9,125 @@
 </script>
 
 <div
-  class="card bg-base-100 flex flex-col items-center shadow-sm w-fit gap-6 p-6"
+  class="card bg-white/30 backdrop-blur-lg border border-white/20 shadow-2xl w-fit gap-6 p-8"
 >
-  <h1 class="text-2xl px-6 font-bold text-orange-400">
-    Calculateur d'intérêt composé
-  </h1>
-  <form class="flex flex-col gap-4">
-    <div class="flex flex-col">
-      <label for="initial-capital" class="label">
-        Montant du versement initial (€)
-      </label>
-      <input
-        bind:value={initialCapital}
-        class="input input-bordered"
-        id="initial-capital"
-        type="number"
-        min="0"
-        step="100"
-      />
+  <div class="card-body p-0">
+    <h2
+      class="card-title text-3xl justify-center font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-6"
+    >
+      💰 Configuration
+    </h2>
+
+    <div class="space-y-6">
+      <div class="form-control">
+        <label for="initial-capital" class="label">
+          <span class="label-text font-semibold text-gray-700 text-lg">
+            💳 Capital initial
+          </span>
+        </label>
+        <div class="input-group gap-2 items-center flex">
+          <input
+            id="initial-capital"
+            bind:value={initialCapital}
+            class="input input-bordered input-lg bg-white/50 backdrop-blur-sm border-white/30"
+            type="number"
+            min="0"
+            step="100"
+            placeholder="10000"
+          />
+          <span
+            class="bg-gradient-to-r h-fit p-1 rounded-md from-amber-500 to-pink-500 text-white font-bold"
+            >€</span
+          >
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="regular-contribution" class="label">
+          <span class="label-text font-semibold text-gray-700 text-lg">
+            📅 Versement régulier
+          </span>
+        </label>
+        <div class="input-group gap-2 items-center flex">
+          <input
+            id="regular-contribution"
+            bind:value={regularContribution}
+            class="input input-bordered input-lg bg-white/50 backdrop-blur-sm border-white/30"
+            type="number"
+            min="0"
+            step="50"
+            placeholder="1000"
+          />
+          <span
+            class="bg-gradient-to-r h-fit p-1 rounded-md from-amber-500 to-pink-500 text-white font-bold"
+            >€</span
+          >
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="frequency" class="label">
+          <span class="label-text font-semibold text-gray-700 text-lg">
+            🔄 Fréquence
+          </span>
+        </label>
+        <select
+          id="frequency"
+          bind:value={frequency}
+          class="select select-bordered select-lg bg-white/50 backdrop-blur-sm border-white/30"
+        >
+          <option>Mensuel</option>
+          <option>Annuel</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label for="interest-rate" class="label">
+          <span class="label-text font-semibold text-gray-700 text-lg">
+            📈 Taux d'intérêt annuel
+          </span>
+        </label>
+        <div class="input-group gap-2 items-center flex">
+          <input
+            id="interest-rate"
+            bind:value={interestRate}
+            class="input input-bordered input-lg bg-white/50 backdrop-blur-sm border-white/30"
+            type="number"
+            min="0"
+            max="20"
+            step="0.1"
+            placeholder="5"
+          />
+          <span
+            class="bg-gradient-to-r h-fit p-1 rounded-md from-amber-500 to-pink-500 text-white font-bold"
+            >%</span
+          >
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="duration" class="label">
+          <span class="label-text font-semibold text-gray-700 text-lg">
+            ⏰ Durée d'investissement
+          </span>
+        </label>
+        <div class="input-group gap-2 items-center flex">
+          <input
+            id="duration"
+            bind:value={duration}
+            class="input input-bordered input-lg bg-white/50 backdrop-blur-sm border-white/30"
+            type="number"
+            min="1"
+            max="50"
+            step="1"
+            placeholder="20"
+          />
+          <span
+            class="bg-gradient-to-r h-fit p-1 rounded-md from-amber-500 to-pink-500 text-white font-bold"
+            >ans</span
+          >
+        </div>
+      </div>
     </div>
-    <div class="flex flex-col">
-      <label for="regular-contribution" class="label">
-        Montant du versement régulier (€)
-      </label>
-      <input
-        bind:value={regularContribution}
-        class="input input-bordered"
-        id="regular-contribution"
-        type="number"
-        min="0"
-        step="50"
-      />
-    </div>
-    <div class="flex flex-col">
-      <label for="frequency" class="label">
-        Fréquence du versement régulier
-      </label>
-      <select
-        bind:value={frequency}
-        class="select select-bordered"
-        id="frequency"
-      >
-        <option>Mensuel</option>
-        <option>Annuel</option>
-      </select>
-    </div>
-    <div class="flex flex-col">
-      <label for="interest-rate" class="label">
-        Taux d'intérêt annuel (%)
-      </label>
-      <input
-        bind:value={interestRate}
-        class="input input-bordered"
-        id="interest-rate"
-        type="number"
-        min="0"
-        max="20"
-        step="0.1"
-      />
-    </div>
-    <div class="flex flex-col">
-      <label for="duration" class="label">
-        Durée de l'investissement (années)
-      </label>
-      <input
-        bind:value={duration}
-        class="input input-bordered"
-        id="duration"
-        type="number"
-        min="1"
-        max="50"
-        step="1"
-      />
-    </div>
-  </form>
+  </div>
 </div>

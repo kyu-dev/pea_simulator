@@ -3,6 +3,7 @@
   import Result from "./components/Result.svelte";
   import Hero from "./components/Hero.svelte";
   import { getResult } from "./lib/calcul";
+  import Header from "./components/Header.svelte";
 
   // Variables d'état dans le parent
   let initialCapital = $state(10000);
@@ -23,21 +24,51 @@
   );
 </script>
 
-<Hero />
-<div class="flex justify-evenly">
-  <Input
-    bind:initialCapital
-    bind:regularContribution
-    bind:frequency
-    bind:interestRate
-    bind:duration
-  />
+<div
+  class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-pink-50"
+>
+  <!-- Éléments décoratifs en arrière-plan -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div
+      class="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-amber-300/20 to-orange-300/20 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute top-96 right-10 w-96 h-96 bg-gradient-to-r from-pink-300/20 to-rose-300/20 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute bottom-10 left-1/3 w-80 h-80 bg-gradient-to-r from-orange-300/20 to-amber-300/20 rounded-full blur-3xl"
+    ></div>
+  </div>
 
-  <Result
-    {result}
-    {initialCapital}
-    {regularContribution}
-    {frequency}
-    {duration}
-  />
+  <!-- Contenu principal -->
+  <div class="relative z-10">
+    <Header />
+    <Hero />
+
+    <div class="container mx-auto px-6 pb-16">
+      <div
+        class="flex flex-col xl:flex-row justify-center items-start gap-8 xl:gap-12"
+      >
+        <div class="w-full xl:w-auto flex justify-center">
+          <Input
+            bind:initialCapital
+            bind:regularContribution
+            bind:frequency
+            bind:interestRate
+            bind:duration
+          />
+        </div>
+
+        <div class="w-full xl:w-auto flex justify-center">
+          <Result
+            {result}
+            {initialCapital}
+            {regularContribution}
+            {frequency}
+            {duration}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
