@@ -10,7 +10,7 @@
     <h2
       class="card-title text-2xl md:text-3xl justify-center font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-6 text-center"
     >
-      🚀 Résultats
+      🚀 Votre Fortune Future
     </h2>
 
     <div class="space-y-6">
@@ -22,7 +22,7 @@
           <div
             class="stat-title text-white/90 font-semibold text-sm md:text-base"
           >
-            💰 Capital Final
+            🎉 Votre patrimoine dans {duration} ans
           </div>
           <div class="stat-value text-2xl md:text-3xl lg:text-4xl">
             {result.final.toLocaleString("fr-FR", {

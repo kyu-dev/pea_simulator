@@ -124,13 +124,11 @@
     });
   }
 
-  // Utilisation des runes Svelte 5 pour gérer le cycle de vie
   $effect(() => {
     if (result && canvasElement) {
       createChart();
     }
 
-    // Cleanup automatique quand le composant est détruit
     return () => {
       if (chartInstance) {
         chartInstance.destroy();
@@ -144,9 +142,9 @@
   class="card bg-white/30 backdrop-blur-lg border border-white/20 shadow-xl w-full mx-auto p-6 hover:bg-white/40 transition-all duration-300"
 >
   <h2
-    class="text-2xl font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-6 text-center"
+    class="text-3xl font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-6 text-center"
   >
-    📊 Visualisation des Données
+    🔎 L'évolution de votre richesse
   </h2>
 
   <div class="relative w-full h-80 lg:h-96">
@@ -160,11 +158,11 @@
     <div class="grid grid-cols-2 gap-4 text-sm">
       <div class="flex items-center gap-2">
         <div class="w-4 h-4 rounded-full bg-amber-500"></div>
-        <span class="font-semibold">Capital total</span>
+        <span class="font-semibold">Votre fortune totale</span>
       </div>
       <div class="flex items-center gap-2">
         <div class="w-4 h-1 border-2 border-dashed border-pink-500"></div>
-        <span class="font-semibold">Contributions</span>
+        <span class="font-semibold">Vos versements</span>
       </div>
     </div>
 
@@ -180,7 +178,9 @@
           maximumFractionDigits: 0,
         })}
       </div>
-      <div class="text-sm text-green-700">💰 Gains des intérêts composés</div>
+      <div class="text-sm text-green-700">
+        🎉 Vos gains purs grâce aux intérêts composés !
+      </div>
     </div>
   </div>
 </div>

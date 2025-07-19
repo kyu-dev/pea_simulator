@@ -5,18 +5,18 @@
     <h2
       class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500 text-transparent bg-clip-text drop-shadow-2xl leading-tight px-2"
     >
-      Time to open a PEA !
+      Et si vous étiez riche dans 20 ans ?
     </h2>
     <p
       class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 font-medium tracking-wide px-4 max-w-4xl mx-auto"
     >
-      Découvrez combien vous pouvez gagner
+      🎯 Calculez le pouvoir magique des intérêts composés sur votre épargne
     </p>
     <div class="flex justify-center mt-4 sm:mt-6 md:mt-8">
       <div
         class="badge badge-md sm:badge-lg bg-gradient-to-r from-amber-500 to-pink-500 text-white font-semibold border-none shadow-lg text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-3"
       >
-        ✨ Simulateur PEA
+        💰 Simulation Gratuite & Instantanée
       </div>
     </div>
   </div>

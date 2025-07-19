@@ -37,13 +37,14 @@
       <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black drop-shadow-2xl tracking-tight bg-gradient-to-r from-white via-gray-100 to-white text-transparent bg-clip-text leading-tight"
       >
-        Calculateur PEA Pro
+        Simulateur PEA Intelligent
       </h1>
     </div>
     <p
       class="text-white/90 font-medium text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg text-center px-4 max-w-2xl"
     >
-      ✨ Maximisez vos investissements avec l&apos;effet des intérêts composés
+      💸 Découvrez combien vous pourriez gagner en investissant régulièrement
+      sur les marchés financiers
     </p>
   </div>
 
