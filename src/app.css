@@ -1,65 +1,67 @@
 @import "tailwindcss";
-@import "daisyui";
+@plugin "daisyui";
 
-/* Styles globaux pour améliorer l'apparence */
-body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-}
-
-/* Animation pour les cartes au survol */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Amélioration des inputs avec focus */
-.input:focus,
-.select:focus {
-  transform: scale(1.02);
-  transition: transform 0.2s ease;
-}
-
-/* Glassmorphism pour les éléments interactifs */
-.glass {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-/* Animation de pulsation douce */
-@keyframes gentle-pulse {
-  0%,
-  100% {
-    opacity: 1;
+/* Animations pour les taches de couleur en arrière-plan */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(60px, -80px);
   }
   50% {
-    opacity: 0.8;
+    transform: translate(-40px, -60px);
+  }
+  75% {
+    transform: translate(-80px, 40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 
-.gentle-pulse {
-  animation: gentle-pulse 3s ease-in-out infinite;
+@keyframes blob-reverse {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-70px, 50px);
+  }
+  50% {
+    transform: translate(50px, 70px);
+  }
+  75% {
+    transform: translate(80px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
-/* Scrollbar personnalisée */
-::-webkit-scrollbar {
-  width: 8px;
+@keyframes blob-slow {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  33% {
+    transform: translate(40px, -50px);
+  }
+  66% {
+    transform: translate(-30px, 45px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+/* Classes d'animation */
+.animate-blob {
+  animation: blob 15s infinite ease-in-out;
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #f59e0b, #ec4899);
-  border-radius: 4px;
+.animate-blob-reverse {
+  animation: blob-reverse 18s infinite ease-in-out;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #d97706, #db2777);
+.animate-blob-slow {
+  animation: blob-slow 12s infinite ease-in-out;
 }
