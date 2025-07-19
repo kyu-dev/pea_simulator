@@ -2,6 +2,7 @@
   import Input from "./components/Input.svelte";
   import Result from "./components/Result.svelte";
   import Hero from "./components/Hero.svelte";
+  import Graph from "./components/Graph.svelte";
   import { getResult } from "./lib/calcul";
   import Header from "./components/Header.svelte";
 
@@ -51,7 +52,7 @@
       <div
         class="flex flex-col lg:flex-row justify-center items-stretch gap-6 sm:gap-8 lg:gap-10 xl:gap-16 max-w-7xl mx-auto"
       >
-        <div class="w-full lg:flex-1 lg:max-w-lg flex justify-center">
+        <div class="w-full lg:flex-1 lg:max-w-2xl flex justify-center">
           <Input
             bind:initialCapital
             bind:regularContribution
@@ -61,7 +62,7 @@
           />
         </div>
 
-        <div class="w-full lg:flex-1 lg:max-w-lg flex justify-center">
+        <div class="w-full lg:flex-1 lg:max-w-2xl flex justify-center">
           <Result
             {result}
             {initialCapital}
@@ -70,6 +71,11 @@
             {duration}
           />
         </div>
+      </div>
+
+      <!-- Composant Graph pour visualiser les données -->
+      <div class="mt-8 sm:mt-10 lg:mt-12 max-w-7xl mx-auto">
+        <Graph {result} {initialCapital} {duration} {regularContribution} />
       </div>
     </div>
   </div>

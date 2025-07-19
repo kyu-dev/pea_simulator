@@ -4,27 +4,27 @@
 </script>
 
 <div
-  class="card bg-white/30 backdrop-blur-lg border border-white/20 shadow-2xl w-full max-w-md mx-auto gap-4 sm:gap-6 p-4 sm:p-6 md:p-8 lg:p-10 hover:bg-white/40 transition-all duration-300"
+  class="card bg-white/30 backdrop-blur-lg border border-white/20 shadow-2xl w-full mx-auto gap-6 p-6 md:p-8 lg:p-10 hover:bg-white/40 transition-all duration-300"
 >
   <div class="card-body p-0">
     <h2
-      class="card-title text-xl sm:text-2xl md:text-3xl justify-center font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-4 sm:mb-6 text-center"
+      class="card-title text-2xl md:text-3xl justify-center font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-6 text-center"
     >
       🚀 Résultats
     </h2>
 
-    <div class="space-y-4 sm:space-y-6">
+    <div class="space-y-6">
       <!-- Capital final avec effet dramatique -->
       <div
         class="stats shadow-lg bg-gradient-to-r w-full from-amber-500 to-pink-500 text-white rounded-xl"
       >
-        <div class="stat place-items-center p-3 sm:p-4 md:p-6">
+        <div class="stat place-items-center p-4 md:p-6">
           <div
-            class="stat-title text-white/90 font-semibold text-xs sm:text-sm"
+            class="stat-title text-white/90 font-semibold text-sm md:text-base"
           >
             💰 Capital Final
           </div>
-          <div class="stat-value text-xl sm:text-2xl md:text-3xl">
+          <div class="stat-value text-2xl md:text-3xl lg:text-4xl">
             {result.final.toLocaleString("fr-FR", {
               style: "currency",
               currency: "EUR",
