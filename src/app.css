@@ -1,113 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* Animations pour les taches de couleur en arrière-plan */
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(60px, -80px);
-  }
-  50% {
-    transform: translate(-40px, -60px);
-  }
-  75% {
-    transform: translate(-80px, 40px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
+/* Animations simplifiées pour les éléments flottants */
 
-@keyframes blob-reverse {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(-70px, 50px);
-  }
-  50% {
-    transform: translate(50px, 70px);
-  }
-  75% {
-    transform: translate(80px, -30px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes blob-slow {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  33% {
-    transform: translate(40px, -50px);
-  }
-  66% {
-    transform: translate(-30px, 45px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-/* Classes d'animation */
-.animate-blob {
-  animation: blob 15s infinite ease-in-out;
-}
-
-.animate-blob-reverse {
-  animation: blob-reverse 18s infinite ease-in-out;
-}
-
-.animate-blob-slow {
-  animation: blob-slow 12s infinite ease-in-out;
-}
-
-/* Animations pour les éléments de texte */
-@keyframes gradient-flow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes text-shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-gentle {
+@keyframes float-large {
   0%,
   100% {
-    opacity: 1;
-    transform: scale(1);
+    transform: translateY(0px);
   }
   50% {
-    opacity: 0.9;
-    transform: scale(1.05);
+    transform: translateY(-20px);
   }
 }
 
@@ -127,7 +29,7 @@
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-15px) rotate(5deg);
+    transform: translateY(-15px) rotate(2deg);
   }
 }
 
@@ -137,25 +39,13 @@
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-8px) rotate(-3deg);
+    transform: translateY(-8px) rotate(-1deg);
   }
 }
 
-/* Classes d'animation pour les éléments */
-.animate-gradient-flow {
-  animation: gradient-flow 6s ease infinite;
-}
-
-.animate-text-shimmer {
-  animation: text-shimmer 3s ease-in-out infinite;
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 1s ease-out;
-}
-
-.animate-pulse-gentle {
-  animation: pulse-gentle 3s ease-in-out infinite;
+/* Classes d'animation pour les éléments flottants */
+.animate-float-large {
+  animation: float-large 6s ease-in-out infinite;
 }
 
 .animate-float-slow {
@@ -175,13 +65,6 @@
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  /* Réduction des tailles d'animation sur mobile */
-  .animate-blob,
-  .animate-blob-reverse,
-  .animate-blob-slow {
-    transform: scale(0.7);
   }
 }
 

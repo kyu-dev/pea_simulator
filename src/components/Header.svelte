@@ -1,7 +1,7 @@
 <div class="relative overflow-hidden">
-  <!-- Effet de particules en arrière-plan -->
+  <!-- Arrière-plan simplifié -->
   <div
-    class="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500 bg-[length:300%_300%] animate-gradient-flow"
+    class="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500"
   ></div>
 
   <!-- Éléments décoratifs flottants -->
@@ -23,9 +23,7 @@
     class="relative z-10 p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col items-center gap-3 sm:gap-4 backdrop-blur-sm"
   >
     <div class="flex items-center gap-3 sm:gap-4 text-center">
-      <div
-        class="p-2 sm:p-3 bg-white/20 rounded-full backdrop-blur-md animate-pulse-gentle"
-      >
+      <div class="p-2 sm:p-3 bg-white/20 rounded-full backdrop-blur-md">
         <svg
           class="w-6 h-6 sm:w-8 sm:h-8 text-white"
           fill="currentColor"
@@ -37,138 +35,20 @@
         </svg>
       </div>
       <h1
-        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black drop-shadow-2xl tracking-tight animate-text-shimmer bg-gradient-to-r from-white via-gray-100 to-white bg-[length:200%_200%] text-transparent bg-clip-text leading-tight"
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black drop-shadow-2xl tracking-tight bg-gradient-to-r from-white via-gray-100 to-white text-transparent bg-clip-text leading-tight"
       >
         Calculateur PEA Pro
       </h1>
     </div>
     <p
-      class="text-white/90 font-medium text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg animate-fade-in-up text-center px-4 max-w-2xl"
+      class="text-white/90 font-medium text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg text-center px-4 max-w-2xl"
     >
-      ✨ Maximisez vos investissements avec l'effet des intérêts composés
+      ✨ Maximisez vos investissements avec l&apos;effet des intérêts composés
     </p>
   </div>
 
-  <!-- Ligne de séparation animée -->
+  <!-- Ligne de séparation -->
   <div
-    class="absolute bottom-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-pulse"
+    class="absolute bottom-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent"
   ></div>
 </div>
-
-<style>
-  @keyframes gradient-flow {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    25% {
-      background-position: 100% 50%;
-    }
-    50% {
-      background-position: 50% 100%;
-    }
-    75% {
-      background-position: 0% 100%;
-    }
-  }
-
-  @keyframes float-slow {
-    0%,
-    100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    33% {
-      transform: translateY(-10px) translateX(5px);
-    }
-    66% {
-      transform: translateY(5px) translateX(-3px);
-    }
-  }
-
-  @keyframes float-medium {
-    0%,
-    100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    50% {
-      transform: translateY(-8px) translateX(-4px);
-    }
-  }
-
-  @keyframes float-fast {
-    0%,
-    100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    25% {
-      transform: translateY(-6px) translateX(3px);
-    }
-    50% {
-      transform: translateY(2px) translateX(-2px);
-    }
-    75% {
-      transform: translateY(-4px) translateX(1px);
-    }
-  }
-
-  @keyframes text-shimmer {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
-  @keyframes pulse-gentle {
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
-  }
-
-  @keyframes fade-in-up {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-gradient-flow {
-    animation: gradient-flow 8s ease-in-out infinite;
-  }
-
-  .animate-float-slow {
-    animation: float-slow 6s ease-in-out infinite;
-  }
-
-  .animate-float-medium {
-    animation: float-medium 4s ease-in-out infinite;
-  }
-
-  .animate-float-fast {
-    animation: float-fast 3s ease-in-out infinite;
-  }
-
-  .animate-text-shimmer {
-    animation: text-shimmer 3s ease-in-out infinite;
-  }
-
-  .animate-pulse-gentle {
-    animation: pulse-gentle 2s ease-in-out infinite;
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 1s ease-out;
-  }
-</style>

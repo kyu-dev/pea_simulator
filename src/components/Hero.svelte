@@ -3,7 +3,7 @@
 >
   <div class="relative z-10 space-y-3 sm:space-y-4 md:space-y-6">
     <h2
-      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500 text-transparent bg-clip-text drop-shadow-2xl animate-pulse leading-tight px-2"
+      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500 text-transparent bg-clip-text drop-shadow-2xl leading-tight px-2"
     >
       Time to open a PEA !
     </h2>

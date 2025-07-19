@@ -30,13 +30,13 @@
   <!-- Éléments décoratifs animés en arrière-plan -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none">
     <div
-      class="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-amber-300/20 to-orange-300/20 rounded-full blur-3xl animate-blob"
+      class="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-amber-300/20 to-orange-300/20 rounded-full blur-3xl animate-float-large"
     ></div>
     <div
-      class="absolute top-96 right-10 w-96 h-96 bg-gradient-to-r from-pink-300/20 to-rose-300/20 rounded-full blur-3xl animate-blob-reverse"
+      class="absolute top-96 right-10 w-96 h-96 bg-gradient-to-r from-pink-300/20 to-rose-300/20 rounded-full blur-3xl animate-float-medium"
     ></div>
     <div
-      class="absolute bottom-10 left-1/3 w-80 h-80 bg-gradient-to-r from-orange-300/20 to-amber-300/20 rounded-full blur-3xl animate-blob-slow"
+      class="absolute bottom-10 left-1/3 w-80 h-80 bg-gradient-to-r from-orange-300/20 to-amber-300/20 rounded-full blur-3xl animate-float-slow"
     ></div>
   </div>
 
