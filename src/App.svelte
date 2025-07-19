@@ -45,11 +45,13 @@
     <Header />
     <Hero />
 
-    <div class="container mx-auto px-6 pb-16">
+    <div
+      class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pb-12 sm:pb-16 lg:pb-20"
+    >
       <div
-        class="flex flex-col xl:flex-row justify-center items-start gap-8 xl:gap-12"
+        class="flex flex-col lg:flex-row justify-center items-stretch gap-6 sm:gap-8 lg:gap-10 xl:gap-16 max-w-7xl mx-auto"
       >
-        <div class="w-full xl:w-auto flex justify-center">
+        <div class="w-full lg:flex-1 lg:max-w-lg flex justify-center">
           <Input
             bind:initialCapital
             bind:regularContribution
@@ -59,7 +61,7 @@
           />
         </div>
 
-        <div class="w-full xl:w-auto flex justify-center">
+        <div class="w-full lg:flex-1 lg:max-w-lg flex justify-center">
           <Result
             {result}
             {initialCapital}
